@@ -1,0 +1,56 @@
+/* style.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #3A1E7A;
+  /* Fundo roxo (#3A1E7A) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.welcome-container {
+  text-align: center;
+  color: #fff;
+  /* Cor do texto */
+}
+
+h1 {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  /* Defina a direção como coluna */
+  align-items: center;
+  /* Centralize horizontalmente */
+}
+
+button {
+  background-color: #4038a0;
+  /* Cor de fundo do botão */
+  color: #fff;
+  /* Cor do texto do botão */
+  border: none;
+  padding: 15px 30px;
+  /* Aumente o padding para tornar os botões maiores */
+  margin: 10px 0;
+  /* Espaçamento vertical maior entre os botões */
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  /* Faça os botões do mesmo tamanho */
+  max-width: 200px;
+  /* Defina a largura máxima para evitar que os botões fiquem muito largos */
+  text-align: center;
+  /* Centralize o texto dentro dos botões */
+}
+
+button:hover {
+  background-color: #272262;
+  /* Cor de fundo do botão ao passar o mouse */
+}
