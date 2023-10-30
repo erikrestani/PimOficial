@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerar Holerite</title>
+    <link rel="stylesheet" href="/assets/css/holerite.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="/assets/images/icone.png" alt="Logo">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="perfil.html"><i class="fa fa-user"></i> Meu Perfil</a></li>
+                <li><a href="inicio.html"><i class="fa fa-cogs"></i> Início </a></li>
+                <li><a href="#"><i class="fa fa-wrench"></i> Configurações</a></li>
+                <li><a href="#"><i class="fa fa-volume-up"></i> Ouvidoria</a></li>
+                <li><a href="login.html"><i class="fa fa-sign-out"></i> Sair</a></li>
+            </ul>
+        </div>
+    </header>
+    
+<body>
+    <div class="holerite-container">
+        <h1>Gerar Holerite</h1>
+        <form id="holerite-form">
+            <div class="form-group">
+                <label for="funcionario-id">ID do Funcionário:</label>
+                <input type="text" id="funcionario-id" name="funcionario-id" required>
+            </div>
+            <div class="form-group">
+                <label for="funcionario-nome">Nome do Funcionário:</label>
+                <input type="text" id="funcionario-nome" name="funcionario-nome" required>
+            </div>
+            <div class="form-group">
+                <label for="funcionario-cargo">Cargo do Funcionário:</label>
+                <input type="text" id="funcionario-cargo" name="funcionario-cargo" required>
+            </div>
+            <button type="submit">Gerar</button>
+        </form>
+    </div>
+    <script src="/assets/js/holerite.js"></script>
+</body>
+
+</html>
