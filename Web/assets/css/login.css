@@ -1,63 +1,65 @@
-/* login.css */
+/* cadastro.css */
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #3A1E7A; /* Fundo roxo (#3A1E7A) */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Helvetica Neue', sans-serif; /* Fonte sans-serif para o corpo */
-  }
-  
-  .login-container {
-    text-align: center;
-    color: #fff; /* Cor do texto */
-    font-family: 'Helvetica Neue', sans-serif; /* Fonte sans-serif para o container */
-    display: flex;
-    flex-direction: column; /* Centralize verticalmente */
-    align-items: center; /* Centralize horizontalmente */
-  }
-  
-  h1 {
-    font-family: 'Georgia', serif; /* Fonte serif para títulos */
-    font-size: 24px;
-    margin: 20px 0;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-    text-align: left;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    color: #fff; /* Cor do texto do label */
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  button {
-    background-color: #4038a0; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto do botão */
-    border: none;
-    padding: 15px 30px; /* Aumente o padding para tornar o botão maior */
-    cursor: pointer;
-    border-radius: 30px;
-    width: 100%; /* Faça o botão ocupar toda a largura do formulário */
-    text-align: center; /* Centralize o texto no botão */
-    font-family: 'Helvetica Neue', sans-serif; /* Fonte sans-serif para o botão */
-  }
-  
-  button:hover {
-    background-color: #272262; /* Cor de fundo do botão ao passar o mouse */
-  }
-  
+  margin: 0;
+  padding: 0;
+  background-color: #3A1E7A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.login-container {
+  text-align: center;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Georgia', serif;
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  width: 300px; /* Ajuste a largura conforme necessário */
+  margin-bottom: 15px; /* Aumente o espaçamento entre os campos */
+}
+
+button {
+  background-color: #4038a0;
+  color: #fff;
+  border: none;
+  padding: 15px 30px; /* Ajuste o padding conforme necessário */
+  cursor: pointer;
+  border-radius: 30px;
+  width: 300px; /* Ajuste a largura conforme necessário */
+  text-align: center;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+button:hover {
+  background-color: #272262;
+}

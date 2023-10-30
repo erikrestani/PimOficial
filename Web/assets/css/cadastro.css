@@ -1,0 +1,66 @@
+/* cadastro.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #3A1E7A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.login-container {
+    text-align: center;
+    color: #fff;
+    font-family: 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px; /* Ajuste a margem superior conforme necessário */
+}
+
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 24px;
+    margin: 10px 0; /* Ajuste o espaçamento conforme necessário */
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    width: 280px; /* Ajuste a largura conforme necessário */
+    margin-bottom: 10px; /* Aumente o espaçamento entre os campos */
+}
+
+button {
+    background-color: #4038a0;
+    color: #fff;
+    border: none;
+    padding: 12px 0; /* Ajuste o padding conforme necessário */
+    cursor: pointer;
+    border-radius: 30px;
+    width: 280px; /* Ajuste a largura conforme necessário */
+    text-align: center;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+button:hover {
+    background-color: #272262;
+}

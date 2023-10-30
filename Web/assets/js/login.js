@@ -10,10 +10,10 @@ document.getElementById("login-form").addEventListener("submit", function (e) {
     // Adicione sua lógica de autenticação aqui
     // Por exemplo, você pode comparar as credenciais com um banco de dados
 
-    // Simulando um login bem-sucedido para redirecionar para outra página
+    // Simulando um login bem-sucedido para redirecionar para a página inicial
     if (usuario === "admin" && senha === "senha123") {
-        // Redirecione para a página de boas-vindas (substitua pela página real)
-        window.location.href = "bem-vindo.html";
+        // Redirecione para a página de início (substitua pela página real)
+        window.location.href = "inicio.html";
     } else {
         // Exiba uma mensagem de erro se o login falhar (você pode personalizar isso)
         alert("Credenciais de login incorretas. Tente novamente.");
