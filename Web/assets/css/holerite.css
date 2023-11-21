@@ -79,3 +79,13 @@ h1 {
     font-size: 36px;
     margin-bottom: 30px;
 }
+#funcionario-id {
+    margin-left: 25px; /* Ajuste a margem conforme necessário */
+}
+#holerite-form button {
+    display: block;
+    margin: 0 auto;
+}
+.nome {
+    margin-bottom: 30px;
+}

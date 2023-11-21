@@ -64,3 +64,10 @@ button {
 button:hover {
     background-color: #272262;
 }
+
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}

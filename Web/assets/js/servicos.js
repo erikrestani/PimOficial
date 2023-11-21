@@ -4,10 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Função de exemplo para o botão 'Atualizar Lista de Funcionários'
-document.querySelector('button:nth-of-type(2)').addEventListener('click', function () {
-    alert('Lista de funcionários atualizada com sucesso!');
-});
 
 // Função de exemplo para o botão 'Gerar Relatório Mensal'
 document.querySelector('button:nth-of-type(3)').addEventListener('click', function () {

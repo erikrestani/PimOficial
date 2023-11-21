@@ -49,10 +49,6 @@ class FolhaGeradaPage extends StatelessWidget {
                 const SizedBox(height: 20),
                 _buildSalaryItem('Salário Base', 'R\$ 5.000,00'),
                 const SizedBox(height: 20),
-                _buildSalaryItem('Bônus', 'R\$ 500,00'),
-                const SizedBox(height: 20),
-                _buildSalaryItem('Descontos', 'R\$ 200,00'),
-                const SizedBox(height: 20),
                 _buildTotalSalary('Total Recebido', 'R\$ 5.300,00'),
                 const SizedBox(height: 20),
                 Center(

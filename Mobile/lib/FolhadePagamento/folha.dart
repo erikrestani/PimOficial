@@ -45,24 +45,6 @@ class FolhaPage extends StatelessWidget {
                   child: TextFormField(
                     style: const TextStyle(color: Colors.black),
                     decoration: InputDecoration(
-                      hintText: 'Digite seu ID',
-                      hintStyle: const TextStyle(color: Colors.black),
-                      filled: true,
-                      fillColor: const Color(0xFFA1A2BB),
-                      contentPadding: const EdgeInsets.symmetric(
-                          horizontal: 16, vertical: 3),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide.none,
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: TextFormField(
-                    style: const TextStyle(color: Colors.black),
-                    decoration: InputDecoration(
                       hintText: 'Digite seu nome',
                       hintStyle: const TextStyle(color: Colors.black),
                       filled: true,
@@ -83,41 +65,10 @@ class FolhaPage extends StatelessWidget {
                       color: const Color(0xFFA1A2BB),
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    child: DropdownButton<String>(
-                      items: <String>[
-                        'Caixa',
-                        'Estoquista',
-                        'Técnico',
-                        'Motoboy',
-                        'Barman'
-                      ].map((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(
-                            value,
-                            style: const TextStyle(color: Colors.black),
-                          ),
-                        );
-                      }).toList(),
-                      onChanged: (String? value) {
-                        // Adicione a lógica para atualizar o texto do cargo aqui
-                      },
-                      hint: const Text(
-                        'Selecione o cargo',
-                        style: TextStyle(color: Colors.black),
-                      ),
-                      dropdownColor: const Color(0xFFA1A2BB),
-                      icon: const Icon(
-                        Icons.arrow_drop_down,
-                        color: Colors.black,
-                      ),
-                      style: const TextStyle(color: Colors.black),
-                      underline: Container(), // Remove o sublinhado
-                    ),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(10.0),
                   child: Container(
                     decoration: BoxDecoration(
                       color: const Color(0xFFA1A2BB),
@@ -147,7 +98,6 @@ class FolhaPage extends StatelessWidget {
                         );
                       }).toList(),
                       onChanged: (String? value) {
-                        // Adicione a lógica para atualizar o texto do mês aqui
                       },
                       hint: const Text(
                         'Selecione o mês',
@@ -159,12 +109,12 @@ class FolhaPage extends StatelessWidget {
                         color: Colors.black,
                       ),
                       style: const TextStyle(color: Colors.black),
-                      underline: Container(), // Remove o sublinhado
+                      underline: Container(), 
                     ),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(60.0),
+                  padding: const EdgeInsets.all(100.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [

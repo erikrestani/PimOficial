@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Cadastro</title>
     <link rel="stylesheet" href="/assets/css/cadastro.css">
+    <style>
+        /* Adicione este bloco de estilo para estilizar o select */
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,6 +41,16 @@
                 <label for="cpf-cnpj">CPF/CNPJ:</label>
                 <input type="text" id="cpf-cnpj" name="cpf-cnpj" required>
             </div>
+            <!-- Adicione o bloco select abaixo do input CPF/CNPJ -->
+            <div class="form-group">
+                <label for="cargo">Cargo:</label>
+                <select id="cargo" name="cargo" required>
+                    <option value="gerente">Gerente</option>
+                    <option value="estoquista">Estoquista</option>
+                    <option value="caixa">Caixa</option>
+                </select>
+            </div>
+            <!-- Fim do bloco select -->
             <div class="form-group">
                 <label for="senha">Senha:</label>
                 <input type="password" id="senha" name="senha" required>

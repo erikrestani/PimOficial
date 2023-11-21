@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '/Componentes/bottomnavigation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class DrawerAdega extends StatelessWidget {
+class DrawerAdega extends StatelessWidget { 
   const DrawerAdega({
     super.key,
   });
