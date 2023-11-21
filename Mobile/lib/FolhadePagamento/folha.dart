@@ -1,9 +1,10 @@
-import 'package:AdegaToronto/FolhadePagamento/folhagerada.dart';
+import 'package:AdegaToronto/Servicos/servicos.dart';
 import 'package:flutter/material.dart';
 import 'package:AdegaToronto/Componentes/appbar.dart';
 import 'package:AdegaToronto/Componentes/bottomnavigation.dart';
 import 'package:AdegaToronto/Componentes/drawer.dart';
 import 'package:AdegaToronto/Componentes/layout.dart';
+import 'package:AdegaToronto/FolhadePagamento/folhagerada.dart';
 
 class FolhaPage extends StatelessWidget {
   const FolhaPage({Key? key}) : super(key: key);
@@ -163,20 +164,51 @@ class FolhaPage extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(
-                          builder: (BuildContext context) =>
-                              const FolhaGeradaPage(),
+                  padding: const EdgeInsets.all(60.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const ServicosPage(),
+                            ),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          shape: const CircleBorder(),
+                          backgroundColor: const Color(0xFF3A1E7A),
+                          padding: const EdgeInsets.all(20),
                         ),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF3A1E7A),
-                    ),
-                    child: const Text('Confirmar'),
+                        child: const Icon(
+                          Icons.arrow_back,
+                          size: 25,
+                          color: Colors.white,
+                        ),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const FolhaGeradaPage(),
+                            ),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          shape: const CircleBorder(),
+                          backgroundColor: const Color(0xFF3A1E7A),
+                          padding: const EdgeInsets.all(20),
+                        ),
+                        child: const Icon(
+                          Icons.check,
+                          size: 25,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],

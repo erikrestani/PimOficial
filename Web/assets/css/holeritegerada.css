@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #4038a0;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu ul li {
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.holerite-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.detail-item,
+.salary-item,
+.total-salary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    margin-left: 60px; /* Adicionei a margem aqui para mover para a direita */
+}
+
+.detail-item span,
+.salary-item span,
+.total-salary span {
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.button-container {
+    margin-top: 30px;
+}
+
+.back-button {
+    background-color: #4038a0;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    margin-right: 20px; /* Aumentei a margem aqui */
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.back-button:hover {
+    background-color: #272262;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #4038a0;
+}
+
+.salary-item.bonus span,
+.salary-item.descontos span,
+.total-salary span {
+    color: #00cc00;
+}

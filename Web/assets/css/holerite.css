@@ -62,10 +62,14 @@ button {
     cursor: pointer;
     border-radius: 30px;
     width: 300px;
-    text-align: center;
     font-family: 'Helvetica Neue', sans-serif;
     margin-top: 20px;
 }
+
+button:hover {
+    background-color: #272262;
+}
+
 
 button:hover {
     background-color: #272262;

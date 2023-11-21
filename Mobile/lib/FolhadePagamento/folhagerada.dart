@@ -56,12 +56,9 @@ class FolhaGeradaPage extends StatelessWidget {
                 _buildTotalSalary('Total Recebido', 'R\$ 5.300,00'),
                 const SizedBox(height: 20),
                 Center(
-                  child: Container(
-                    width: 140,
+                  child: SizedBox(
+                    width: 130,
                     height: 45,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(40),
-                    ),
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.of(context).pushReplacement(
