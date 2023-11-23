@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços</title>
-    <link rel="stylesheet" href="/assets/css/servicos.css">
+    <link rel="stylesheet" href="../css/servicos.css">
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <img src="/assets/images/icone.png" alt="Logo">
+            <img src="../images/icone.png" alt="Logo">
         </div>
         <div class="menu">
             <ul>
@@ -27,20 +27,21 @@
     <div class="content">
         <h1>Serviços</h1>
         <div class="servicos-container">
-            <button id="gerar-holerite-btn">Gerar Holerite de Funcionário</button>
+            <button id="gerar-holerite-btn" style="display: none;">Gerar Holerite de Funcionário</button>
             <button id="visualizar-holerite-btn">Visualizar Holerite</button>
-            <button>Atualizar Lista de Funcionários</button>
-            <button>Gerar Relatório Mensal</button>
+            <button id="atualizar-lista-btn" style="display: none;">Atualizar Lista de Funcionários</button>
+            <button id="gerar-relatorio-btn" style="display: none;">Gerar Relatório Mensal</button>
         </div>
+        
     </div>
-    <script src="/assets/js/servicos.js"></script>
+    <script src="../js/servicos.js"></script>
     <script>
         document.getElementById('visualizar-holerite-btn').addEventListener('click', function () {
             window.location.href = 'holeritegerada.html';
         });
     </script>
 </body>
-    <script src="/assets/js/servicos.js"></script>
+    <script src="../js/servicos.js"></script>
 </body>
 
 </html>

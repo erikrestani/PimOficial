@@ -1,24 +1,42 @@
-// cadastro.js
+document
+  .getElementById("cadastro-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
 
-document.getElementById("cadastro-form").addEventListener("submit", function (e) {
-    e.preventDefault(); // Evita o envio padrão do formulário
+    var nome = document.getElementsByName("name")[0].value;
+    var email = document.getElementsByName("email")[0].value;
+    var senha = document.getElementsByName("password")[0].value;
+    var phone = document.getElementsByName("phone")[0].value;
+    var cpf_cnpj = document.getElementsByName("cpf_cnpj")[0].value;
+    var role = document.getElementsByName("role")[0].value;
 
-    // Obter valores dos campos de nome, e-mail e senha
-    var nome = document.getElementById("nome").value;
-    var email = document.getElementById("email").value;
-    var senha = document.getElementById("senha").value;
+    var data = {
+      name: nome,
+      email: email,
+      password: senha,
+      phone: phone,
+      cpf_cnpj: cpf_cnpj,
+      role: role,
+    };
 
-    // Adicione sua lógica de cadastro aqui
-    // Por exemplo, você pode enviar os dados para um servidor ou banco de dados
+    console.log("Enviando dados:", data);
 
-    // Exemplo de log para verificar os valores
-    console.log("Nome: ", nome);
-    console.log("E-mail: ", email);
-    console.log("Senha: ", senha);
-
-    // Exiba uma mensagem de sucesso de cadastro (você pode personalizar isso)
-    alert("Cadastro realizado com sucesso!");
-
-    // Redirecione para a página de login (substitua pela página real)
-    window.location.href = "login.html";
-});
+    fetch("http://localhost:3000/users/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        console.log("Resposta recebida:", response);
+        if (!response.ok) {
+          throw new Error(`Erro HTTP: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((responseData) => {
+        console.log("Sucesso:", responseData);
+      })
+      .catch((error) => {
+        console.error("Erro:", error);
+      });
+  });

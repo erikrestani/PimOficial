@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meu Perfil</title>
-    <link rel="stylesheet" href="/assets/css/perfil.css">
-</head>
+    <link rel="stylesheet" href="../css/perfil.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="logo">
-            <img src="/assets/images/icone.png" alt="Logo">
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="inicio.html"><i class="fa fa-home"></i> Início</a></li>
-                <li><a href="servicos.html"><i class="fa fa-cogs"></i> Serviços</a></li>
-                <li><a href="#"><i class="fa fa-wrench"></i> Configurações</a></li>
-                <li><a href="#"><i class="fa fa-volume-up"></i> Ouvidoria</a></li>
-                <li><a href="login.html"><i class="fa fa-sign-out"></i> Sair</a></li>
-            </ul>
-        </div>
+      <div class="logo">
+        <img src="../images/icone.png" alt="Logo" />
+      </div>
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="inicio.html"><i class="fa fa-home"></i> Início</a>
+          </li>
+          <li>
+            <a href="servicos.html"><i class="fa fa-cogs"></i> Serviços</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-wrench"></i> Configurações</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-volume-up"></i> Ouvidoria</a>
+          </li>
+          <li>
+            <a href="login.html"><i class="fa fa-sign-out"></i> Sair</a>
+          </li>
+        </ul>
+      </div>
     </header>
 
     <div class="content">
-        <div class="perfil-container">
-            <div class="perfil-foto">
-                <img src="/assets/images/foto_perfil.png" alt="Foto de Perfil">
-            </div>
-            <div class="perfil-info">
-                <p><strong>CPF/CNPJ:</strong> 123.456.789-00</p>
-                <p><strong>Nome:</strong> Nome Sobrenome</p>
-                <p><strong>Setor:</strong> Setor X</p>
-                <p><strong>Telefone:</strong> (00) 1234-5678</p>
-                <p><strong>Email:</strong> exemplo@dominio.com</p>
-            </div>
+      <div class="perfil-container">
+        <div class="perfil-foto">
+          <img src="../images/foto_perfil.png" alt="Foto de Perfil" />
         </div>
+        <div class="perfil-info">
+          <p><strong>CPF/CNPJ:</strong> <span id="cpf-cnpj"></span></p>
+          <p><strong>Nome:</strong> <span id="nome"></span></p>
+          <p><strong>Setor:</strong> <span id="setor"></span></p>
+          <p><strong>Telefone:</strong><span id="telefone"></span></p>
+          <p><strong>Email:</strong><span id="email"></span></p>
+        </div>
+      </div>
     </div>
 
-    <script src="/assets/js/perfil.js"></script>
-</body>
-
+    <script src="../js/perfil.js"></script>
+  </body>
 </html>

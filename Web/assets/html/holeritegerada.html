@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Holerite Gerado</title>
-    <link rel="stylesheet" href="/assets/css/holeritegerada.css">
+    <link rel="stylesheet" href="../css/holeritegerada.css">
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <img src="/assets/images/icone.png" alt="Logo">
+            <img src="../images/icone.png" alt="Logo">
         </div>
         <div class="menu">
             <ul>
@@ -25,34 +25,42 @@
     </header>
 
     <div class="holerite-container">
+        <select id="select-month">
+            <option value="">Escolha um mês</option>
+            <!-- Opções de mês serão adicionadas aqui -->
+        </select>
+
         <h1>Detalhes da Holerite:</h1>
         <div class="detail-item">
             <span>ID do Funcionário:</span>
-            <span>123456</span>
+            <span id="id"></span>
         </div>
         <div class="detail-item">
             <span>Nome do Funcionário:</span>
-            <span>Nome Sobrenome</span>
+            <span id="nome"></span>
         </div>
         <div class="detail-item">
             <span>Cargo:</span>
-            <span>Caixa</span>
+            <span id="cargo"></span>
         </div>
         <div class="detail-item">
             <span>Mês:</span>
-            <span>Jan 2023</span>
+            <span id="mes"></span>
         </div>
         <div class="salary-item">
             <span>Salário Base:</span>
-            <span>R$ 5.000,00</span>
+            <span id="salario-base"></span>
         </div>
         <div class="total-salary">
-            <span>Total Recebido:</span>
-            <span class="total-salary-amount">R$ 5.300,00</span>
+            <span >Total Recebido:</span>
+            <span id="salario-total" class="total-salary-amount"></span>
 
     </div>
 
-    <script src="script.js"></script>
+    <div id="holerite-details" style="display: none;">
+    </div>
+
+    <script src="../js/holeritegerada.js"></script>
 </body>
 
 </html>

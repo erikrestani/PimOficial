@@ -1,21 +1,27 @@
-// login.js
-
 document.getElementById("login-form").addEventListener("submit", function (e) {
-    e.preventDefault(); // Evita o envio padrão do formulário
+  e.preventDefault(); // Evita o envio padrão do formulário
 
-    // Obter valores dos campos de usuário e senha
-    var usuario = document.getElementById("usuario").value;
-    var senha = document.getElementById("senha").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
 
-    // Adicione sua lógica de autenticação aqui
-    // Por exemplo, você pode comparar as credenciais com um banco de dados
-
-    // Simulando um login bem-sucedido para redirecionar para a página inicial
-    if (usuario === "admin" && senha === "senha123") {
-        // Redirecione para a página de início (substitua pela página real)
+  fetch("http://localhost:3000/users/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ email, password }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.token) {
+        localStorage.setItem("token", data.token); // Armazenar o token no localStorage
+        // Ou, para sessionStorage: sessionStorage.setItem('token', data.token);
         window.location.href = "inicio.html";
-    } else {
-        // Exiba uma mensagem de erro se o login falhar (você pode personalizar isso)
-        alert("Credenciais de login incorretas. Tente novamente.");
-    }
+      } else {
+        throw new Error("Token não recebido");
+      }
+    })
+    .catch((error) => {
+      console.error("Erro:", error);
+    });
 });

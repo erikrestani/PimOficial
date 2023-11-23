@@ -1,41 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Holerite</title>
-    <link rel="stylesheet" href="/assets/css/holerite.css">
-</head>
+    <link rel="stylesheet" href="../css/holerite.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="logo">
-            <img src="/assets/images/icone.png" alt="Logo">
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="perfil.html"><i class="fa fa-user"></i> Meu Perfil</a></li>
-                <li><a href="inicio.html"><i class="fa fa-cogs"></i> Início </a></li>
-                <li><a href="#"><i class="fa fa-wrench"></i> Configurações</a></li>
-                <li><a href="#"><i class="fa fa-volume-up"></i> Ouvidoria</a></li>
-                <li><a href="login.html"><i class="fa fa-sign-out"></i> Sair</a></li>
-            </ul>
-        </div>
+      <div class="logo">
+        <img src="../images/icone.png" alt="Logo" />
+      </div>
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="perfil.html"><i class="fa fa-user"></i> Meu Perfil</a>
+          </li>
+          <li>
+            <a href="inicio.html"><i class="fa fa-cogs"></i> Início </a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-wrench"></i> Configurações</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-volume-up"></i> Ouvidoria</a>
+          </li>
+          <li>
+            <a href="login.html"><i class="fa fa-sign-out"></i> Sair</a>
+          </li>
+        </ul>
+      </div>
     </header>
 
     <div class="holerite-container">
-        <h1>Gerar Holerite</h1>
-        <form id="holerite-form" action="holeritegerada.html" method="post">
-            <div class="form-group nome">
-                <label for="funcionario-nome">Nome do Funcionário:</label>
-                <input type="text" id="funcionario-nome" name="funcionario-nome" required>
-            </div>
-            <button type="submit">Gerar</button>
-        </form>
+      <h1>Gerar Holerite</h1>
+      <form id="holerite-form">
+        <div class="form-group">
+          <label for="userId">Nome do Funcionário:</label>
+          <select id="userId" name="userId"></select>
+        </div>
+        <div class="form-group">
+          <label for="month">Mês:</label>
+          <select id="month" name="month" required>
+            <option>-----------</option>
+            <option value="Janeiro">Janeiro</option>
+            <option value="Fevereiro">Fevereiro</option>
+            <option value="Março">Março</option>
+            <option value="Abril">Abril</option>
+            <option value="Maio">Maio</option>
+            <option value="Junho">Junho</option>
+            <option value="Julho">Julho</option>
+            <option value="Agosto">Agosto</option>
+            <option value="Setembro">Setembro</option>
+            <option value="Outubro">Outubro</option>
+            <option value="Novembro">Novembro</option>
+            <option value="Dezembro">Dezembro</option>
+          </select>
+        </div>
+        <button type="submit">Gerar Holerite</button>
+      </form>
     </div>
 
-    <script src="/assets/js/holerite.js"></script>
-</body>
-
+    <script src="../js/holerite.js"></script>
+  </body>
 </html>

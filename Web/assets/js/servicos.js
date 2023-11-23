@@ -1,11 +1,24 @@
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("gerar-holerite-btn").addEventListener("click", function () {
-        window.location.href = "holerite.html"; // Substitua "holerite.html" pela página real da holerite
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const token = localStorage.getItem("token");
+    const response = await fetch("http://localhost:3000/users/role", {
+      headers: {
+        Authorization: "Bearer " + token,
+      },
     });
-});
 
-
-// Função de exemplo para o botão 'Gerar Relatório Mensal'
-document.querySelector('button:nth-of-type(3)').addEventListener('click', function () {
-    alert('Relatório mensal gerado com sucesso!');
+    const data = await response.json();
+    console.log(data);
+    // Verificar se o usuário é um gerente
+    if (data.role === "gerente") {
+      // Exibir botões específicos para gerentes
+      document.getElementById("gerar-holerite-btn").style.display = "block";
+      document.getElementById("atualizar-lista-btn").style.display = "block";
+      document.getElementById("gerar-relatorio-btn").style.display = "block";
+    }
+    // O botão "Visualizar Holerite" é sempre exibido
+    document.getElementById("visualizar-holerite-btn").style.display = "block";
+  } catch (error) {
+    console.error("Erro ao obter role do usuário:", error);
+  }
 });
