@@ -31,7 +31,6 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    final Uri toLaunch = Uri.parse('http://www.youtube.com');
     return Scaffold(
       body: SingleChildScrollView(
         child: Form(
@@ -180,27 +179,7 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                             ],
                           ),
-                          const SizedBox(height: 5),
-                          Center(
-                            child: SizedBox(
-                              height: 48,
-                              child: Column(
-                                children: [
-                                  TextButton(
-                                    onPressed: () async {
-                                      await launchInBrowser(toLaunch);
-                                    },
-                                    child: const Text(
-                                      "Não tem uma conta? Cadastre-se!",
-                                      style: TextStyle(
-                                          color: Color(0xFFA1A2BB),
-                                          fontSize: 11),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
+                          const SizedBox(height: 30),
                           Center(
                             child: SizedBox(
                               height: 25,
@@ -263,7 +242,7 @@ class _LoginPageState extends State<LoginPage> {
                             child: Padding(
                               padding: EdgeInsets.only(
                                   top: MediaQuery.of(context).size.height *
-                                      0.05),
+                                      0.14),
                               child: const Center(
                                 child: Text(
                                   'v0101 - AdegaToronto',
