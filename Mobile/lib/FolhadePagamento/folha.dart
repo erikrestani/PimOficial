@@ -7,7 +7,7 @@ import 'package:AdegaToronto/Componentes/layout.dart';
 import 'package:AdegaToronto/FolhadePagamento/folhagerada.dart';
 
 class FolhaPage extends StatelessWidget {
-  const FolhaPage({Key? key}) : super(key: key);
+  const FolhaPage({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -6,7 +6,7 @@ import 'package:AdegaToronto/Componentes/drawer.dart';
 import 'package:AdegaToronto/Componentes/layout.dart';
 
 class FolhaGeradaPage extends StatelessWidget {
-  const FolhaGeradaPage({Key? key}) : super(key: key);
+  const FolhaGeradaPage({super.key});
 
   @override
   Widget build(BuildContext context) {

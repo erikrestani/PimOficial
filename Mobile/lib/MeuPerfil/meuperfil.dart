@@ -5,7 +5,7 @@ import 'package:AdegaToronto/Componentes/drawer.dart';
 import 'package:AdegaToronto/Componentes/layout.dart';
 
 class MeuPerfil extends StatefulWidget {
-  const MeuPerfil({Key? key}) : super(key: key);
+  const MeuPerfil({super.key});
 
   @override
   State<MeuPerfil> createState() => _MeuPerfilState();

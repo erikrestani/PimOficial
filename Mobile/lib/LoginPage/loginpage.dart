@@ -1,9 +1,10 @@
-// ignore_for_file: library_private_types_in_public_api
+// ignore_for_file: library_private_types_in_public_api, use_build_context_synchronously
 
+import 'package:http/http.dart' as http;
 import 'package:AdegaToronto/RecuperarSenha/recuperarsenha.dart';
-import 'package:flutter/material.dart';
 import '/HomePage/homepage.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter/material.dart';
 
 Future<void> launchInBrowser(Uri url) async {
   if (!await launchUrl(url, mode: LaunchMode.externalNonBrowserApplication)) {}
@@ -22,11 +23,42 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
-  //bool _isLoading = false;
 
-  @override
-  void initState() {
-    super.initState();
+  Future<void> _performLogin() async {
+    final String email = _emailController.text;
+    final String password = _passwordController.text;
+
+    try { 
+      final response = await http.post(
+        Uri.parse("http://192.168.15.174:3000/users/login"),
+        body: {
+          'email': email,
+          'password': password,
+        },
+      );
+      if (response.statusCode == 200) {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(
+            builder: (BuildContext context) => const Home(),
+          ),
+        );
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Login falhou. Verifique suas credenciais.'),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
+    } catch (error) {
+      print('Erro durante a requisição: $error');
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Erro durante a requisição. Tente novamente.'),
+          backgroundColor: Colors.red,
+        ),
+      );
+    }
   }
 
   @override
@@ -210,14 +242,8 @@ class _LoginPageState extends State<LoginPage> {
                             child: SizedBox(
                               width: MediaQuery.of(context).size.width * 0.35,
                               child: TextButton(
-                                onPressed: () {
-                                  Navigator.of(context).pushReplacement(
-                                    MaterialPageRoute(
-                                      builder: (BuildContext context) =>
-                                          const Home(),
-                                    ),
-                                  );
-                                },
+                                onPressed:
+                                    _performLogin, 
                                 style: ButtonStyle(
                                   backgroundColor:
                                       MaterialStateProperty.all<Color>(
@@ -242,7 +268,7 @@ class _LoginPageState extends State<LoginPage> {
                             child: Padding(
                               padding: EdgeInsets.only(
                                   top: MediaQuery.of(context).size.height *
-                                      0.14),
+                                      0.12),
                               child: const Center(
                                 child: Text(
                                   'v0101 - AdegaToronto',

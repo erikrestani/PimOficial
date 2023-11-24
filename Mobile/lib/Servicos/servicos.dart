@@ -6,7 +6,7 @@ import 'package:AdegaToronto/Componentes/drawer.dart';
 import 'package:AdegaToronto/Componentes/layout.dart';
 
 class ServicosPage extends StatelessWidget {
-  const ServicosPage({Key? key}) : super(key: key);
+  const ServicosPage({super.key});
 
   @override
   Widget build(BuildContext context) {

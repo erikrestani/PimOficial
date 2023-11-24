@@ -5,11 +5,11 @@ class LayoutTelas extends StatelessWidget {
   final Widget? searchBar;
   final Widget? filter;
   const LayoutTelas({
-    Key? key,
+    super.key,
     required this.body,
     this.searchBar,
     this.filter,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
