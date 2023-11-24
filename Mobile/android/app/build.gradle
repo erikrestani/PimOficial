@@ -40,6 +40,12 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
 
+    android {                                                                                     
+    defaultConfig {                                                                             
+    minSdkVersion 21                                                                          
+   }                                                                                           
+ }    
+
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.example.projeto_pim"
