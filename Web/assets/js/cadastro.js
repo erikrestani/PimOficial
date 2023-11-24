@@ -35,6 +35,7 @@ document
       })
       .then((responseData) => {
         console.log("Sucesso:", responseData);
+        alert("Cadastro realizado com sucesso!");
       })
       .catch((error) => {
         console.error("Erro:", error);

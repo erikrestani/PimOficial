@@ -49,6 +49,7 @@ document
           }
           throw new Error(`Erro HTTP: ${response.status}`);
         }
+        alert("Holerite gerado com sucesso!")
         return response.json();
       })
       .then((data) => {

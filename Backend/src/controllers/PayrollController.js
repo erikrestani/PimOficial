@@ -13,14 +13,6 @@ const PayrollController = {
         return res.status(404).json({ message: "Usuário não encontrado" });
       }
 
-      // Verifica se o usuário é um gerente
-      if (requester.role !== "gerente") {
-        console.log("Erro: Ação permitida apenas para gerentes");
-        return res
-          .status(403)
-          .json({ message: "Ação permitida apenas para gerentes" });
-      }
-
       const baseSalary = { estoquista: 1500, caixa: 1700, gerente: 3500 }[
         requester.role
       ];
