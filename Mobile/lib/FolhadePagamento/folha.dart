@@ -97,8 +97,7 @@ class FolhaPage extends StatelessWidget {
                           ),
                         );
                       }).toList(),
-                      onChanged: (String? value) {
-                      },
+                      onChanged: (String? value) {},
                       hint: const Text(
                         'Selecione o mês',
                         style: TextStyle(color: Colors.black),
@@ -109,7 +108,7 @@ class FolhaPage extends StatelessWidget {
                         color: Colors.black,
                       ),
                       style: const TextStyle(color: Colors.black),
-                      underline: Container(), 
+                      underline: Container(),
                     ),
                   ),
                 ),

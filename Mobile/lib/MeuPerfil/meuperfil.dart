@@ -3,9 +3,13 @@ import 'package:AdegaToronto/Componentes/appbar.dart';
 import 'package:AdegaToronto/Componentes/bottomnavigation.dart';
 import 'package:AdegaToronto/Componentes/drawer.dart';
 import 'package:AdegaToronto/Componentes/layout.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MeuPerfil extends StatefulWidget {
-  const MeuPerfil({super.key});
+  const MeuPerfil({Key? key});
 
   @override
   State<MeuPerfil> createState() => _MeuPerfilState();
@@ -19,6 +23,39 @@ class _MeuPerfilState extends State<MeuPerfil> {
   @override
   void initState() {
     super.initState();
+    fetchData();
+  }
+
+  Future<Map<String, dynamic>> fetchPerfil() async {
+    final token = await SharedPreferences.getInstance().then((prefs) {
+      return prefs.getString('token');
+    });
+
+    final response = await http.get(
+      Uri.parse("http://192.168.15.174:3000/users/me"),
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer $token',
+      },
+    );
+
+    if (response.statusCode == 200) {
+      return json.decode(response.body);
+    } else {
+      throw Exception(
+          'Falha ao carregar dados do perfil. Código: ${response.statusCode}');
+    }
+  }
+
+  Future<void> fetchData() async {
+    try {
+      final perfil = await fetchPerfil();
+      _nomeController.text = perfil['nome'];
+      _emailController.text = perfil['email'];
+      _telefoneController.text = perfil['telefone'];
+    } catch (e) {
+      print('Erro ao buscar dados do perfil: $e');
+    }
   }
 
   @override
@@ -88,6 +125,7 @@ class _MeuPerfilState extends State<MeuPerfil> {
                         fontSize: 12,
                         color: Color.fromRGBO(0, 0, 0, 1),
                       ),
+                      readOnly: true,
                       decoration: const InputDecoration(
                         border: InputBorder.none,
                         hintStyle: TextStyle(color: Colors.black),
@@ -129,7 +167,7 @@ class _MeuPerfilState extends State<MeuPerfil> {
                         fontSize: 12,
                         color: Color.fromRGBO(0, 0, 0, 1),
                       ),
-                      enabled: false, // Set this to false to disable editing
+                      readOnly: true,
                       decoration: const InputDecoration(
                         border: InputBorder.none,
                         hintStyle: TextStyle(color: Colors.grey),
@@ -144,7 +182,7 @@ class _MeuPerfilState extends State<MeuPerfil> {
                     fontWeight: FontWeight.w500,
                     fontFamily: 'Poppins',
                     fontSize: 12,
-                    color: Color(0xFFA1A2BB), // Mesma cor que o título "Nome"
+                    color: Color(0xFFA1A2BB),
                   ),
                 ),
                 const SizedBox(height: 8),
@@ -168,6 +206,7 @@ class _MeuPerfilState extends State<MeuPerfil> {
                         fontSize: 12,
                         color: Color.fromRGBO(0, 0, 0, 1),
                       ),
+                      readOnly: true,
                       decoration: const InputDecoration(
                         border: InputBorder.none,
                         hintStyle: TextStyle(color: Colors.grey),
