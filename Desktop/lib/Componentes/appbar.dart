@@ -62,7 +62,7 @@ class _MyAppBarState extends State<MyAppBar> {
       leading: widget.leading,
       automaticallyImplyLeading: false,
       title: Padding(
-        padding: const EdgeInsets.only(left: 50, right: 10, top: 10),
+        padding: const EdgeInsets.only(left: 255, right: 10, top: 10),
         child:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           FutureBuilder(

@@ -2,7 +2,7 @@ import 'package:AdegaToronto/LoginPage/loginpage.dart';
 import 'package:flutter/material.dart';
 
 class RecuperarSenha extends StatelessWidget {
-  const RecuperarSenha({Key? key}) : super(key: key);
+  const RecuperarSenha({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class RecuperarSenha extends StatelessWidget {
 }
 
 class RecuperarSenhaMenu extends StatefulWidget {
-  const RecuperarSenhaMenu({Key? key}) : super(key: key);
+  const RecuperarSenhaMenu({super.key});
 
   @override
   State<RecuperarSenhaMenu> createState() => _RecuperarSenhaMenu();

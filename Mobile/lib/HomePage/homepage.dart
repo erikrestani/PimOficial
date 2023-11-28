@@ -24,14 +24,6 @@ class _HomeState extends State<Home> {
       appBar: const MyAppBar(
         title: 'Painel',
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          // try {
-          // } catch (error) {
-          //   print(error);
-          // }
-        },
-      ),
       drawer: const DrawerAdega(),
       body: Stack(
         clipBehavior: Clip.none,
@@ -97,7 +89,7 @@ class _HomeState extends State<Home> {
                                 ),
                               ],
                             ),
-                            const SizedBox(height: 8), 
+                            const SizedBox(height: 8),
                             Row(
                               children: [
                                 Expanded(

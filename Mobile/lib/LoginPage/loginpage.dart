@@ -1,9 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api, use_build_context_synchronously
 
 import 'dart:convert';
-
 import 'package:http/http.dart' as http;
-import 'package:AdegaToronto/RecuperarSenha/recuperarsenha.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '/HomePage/homepage.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -228,31 +226,6 @@ class _LoginPageState extends State<LoginPage> {
                             ],
                           ),
                           const SizedBox(height: 30),
-                          Center(
-                            child: SizedBox(
-                              height: 25,
-                              child: Column(
-                                children: [
-                                  GestureDetector(
-                                    child: const Text(
-                                      "Esqueceu a senha? Recupere aqui",
-                                      style: TextStyle(
-                                          color: Color(0xFFA1A2BB),
-                                          fontSize: 11),
-                                    ),
-                                    onTap: () {
-                                      Navigator.of(context).pushReplacement(
-                                        MaterialPageRoute(
-                                          builder: (BuildContext context) =>
-                                              const RecuperarSenhaMenu(),
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
                           const SizedBox(height: 45),
                           Center(
                             child: SizedBox(
