@@ -32,7 +32,7 @@ class _MeuPerfilState extends State<MeuPerfil> {
     });
 
     final response = await http.get(
-      Uri.parse("http://192.168.15.174:3000/users/me"),
+      Uri.parse("http://172.20.10.5:3000/users/me"),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $token',

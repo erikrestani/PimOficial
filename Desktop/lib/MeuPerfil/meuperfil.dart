@@ -30,7 +30,7 @@ class _MeuPerfilState extends State<MeuPerfil> {
     });
 
     final response = await http.get(
-      Uri.parse("http://192.168.15.174:3000/users/me"),
+      Uri.parse("http://172.20.10.5:3000/users/me"),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $token',
@@ -66,9 +66,9 @@ class _MeuPerfilState extends State<MeuPerfil> {
       ),
       backgroundColor: const Color(0xFF2C1C50),
       body: LayoutTelas(
-        body: SingleChildScrollView(
+        body: Expanded(
           child: Padding(
-            padding: const EdgeInsets.only(left: 630, right: 16, top: 50),
+            padding: const EdgeInsets.only(left: 470, right: 16, top: 50),
             child: Container(
               height: 800,
               decoration: const BoxDecoration(

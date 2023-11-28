@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(180),
+                  padding: const EdgeInsets.all(120),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [

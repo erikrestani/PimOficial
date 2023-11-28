@@ -44,7 +44,7 @@ class _FolhaPageState extends State<FolhaPage> {
       body: LayoutTelas(
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(left: 640, right: 16, top: 100),
+            padding: const EdgeInsets.only(left: 450, right: 16, top: 80),
             child: Container(
               width: 400,
               decoration: const BoxDecoration(
@@ -156,7 +156,7 @@ class _FolhaPageState extends State<FolhaPage> {
   }
 
   getPayrollDetails() async {
-    const apiUrl = "http://192.168.15.174:3000/payroll/getPayroll";
+    const apiUrl = "http://172.20.10.5:3000/payroll/getPayroll";
 
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String? token = prefs.getString('token');
@@ -204,7 +204,7 @@ class _FolhaPageState extends State<FolhaPage> {
   }
 
   getPayrollMonths() async {
-    const apiUrl = "http://192.168.15.174:3000/payroll/getPayrollMonths";
+    const apiUrl = "http://172.20.10.5:3000/payroll/getPayrollMonths";
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String? token = prefs.getString('token');
     // final token = await getAuthToken();

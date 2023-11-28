@@ -47,7 +47,7 @@ class LayoutTelas extends StatelessWidget {
                   const SizedBox(height: 20),
                   buildDrawerItem(
                       context, 'Meu perfil', Icons.account_circle, '/perfil'),
-                  const SizedBox(height: 300),
+                  const SizedBox(height: 100),
                   buildDrawerItem(context, 'Configurações', Icons.settings, ''),
                   const SizedBox(height: 10)
                 ],
@@ -56,7 +56,7 @@ class LayoutTelas extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   buildDrawerItem(context, 'Suporte', Icons.support_agent, ''),
-                  const SizedBox(height: 250),
+                  const SizedBox(height: 150),
                   buildLogoutButton(context),
                 ],
               ),
