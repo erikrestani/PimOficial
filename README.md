@@ -18,7 +18,9 @@
       <li>The automation of payroll processing.</li>
       <li>Three levels of user access: admin, developer, and employee.</li>
     </ul>
-    This project significantly helped me grow as a developer and broaden my understanding of real-world systems development.
+    The project was developed using the <strong>Scrum methodology</strong>, ensuring efficient teamwork and progress through well-structured sprints.  
+    <br><br>
+    This experience significantly helped me grow as a developer and broaden my understanding of real-world systems development.
   </p>
 
   <h2>💻 Technologies Used</h2>
