@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Final Project - Systems Analysis and Development</title>
 </head>
 <body>
   <h1>Final Project - Systems Analysis and Development</h1>
