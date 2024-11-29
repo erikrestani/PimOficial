@@ -9,7 +9,7 @@
 
   <h2>📖 About</h2>
   <p>
-    This project was the capstone of my Systems Analysis and Development course. It was a challenging experience that required me to work with various programming languages and technologies.  
+   This project was the capstone of my Systems Analysis and Development course. It was a challenging experience that required me to work with various programming languages and technologies, developing a full-stack project to enhance my knowledge. 
     <br><br>
     The challenge was to develop a payroll system for a fictitious medium-sized company. The system needed to include:
     <ul>
